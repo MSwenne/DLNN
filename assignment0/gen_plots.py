@@ -4,7 +4,7 @@ from math import sin
 import numpy as np
 import random
 
-N = [9,15,100]
+N = [9, 15, 100]
 dim = 2
 
 y = lambda x: 0.5 + 0.4*np.sin(2*np.pi*x) 
