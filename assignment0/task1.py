@@ -7,14 +7,14 @@ import random
 N = [9, 15, 100]
 dim = 2
 
-y = lambda x: 0.5 + 0.4*np.sin(2*np.pi*x) 
+y = lambda x: 0.5 + 0.4*np.sin(2*np.pi*x)
 
 for n in N:
     x_dense = np.linspace(0, 1, 10000)
 
     x_train = np.linspace(0, 1, n)
     y_train = y(x_train) + np.random.normal(0, 0.05, n)
-    
+
     x_test = np.linspace(0, 1, n)
     y_test = y(x_test) +  np.random.normal(0, 0.05, n)
 
@@ -31,9 +31,10 @@ for n in N:
         ax.plot(x_dense, y(x_dense), '-g')
         ax.plot(x_dense, poly(x_dense), '-r')
         ax.plot(x_train, y_train, 'ob', fillstyle='none')
-        
+
     for ax in axs.flat:
         ax.set(xlabel='x', ylabel='t')
     fig.tight_layout()
+    fig.suptitle(f"{n} data points")
     # plt.plot(x_test, y_test, '.r')
 plt.show()
