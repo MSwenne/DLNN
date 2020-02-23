@@ -18,12 +18,11 @@ class CenterDistanceClassifier:
         assert len(y.shape) == 1 or len(y.shape) == 2 and y.shape[1] == 1
         X = as_numpy(X)
         y = as_numpy(y).flatten()
-
-        self.labels = np.array(sorted(set(y)))
+        y_label_idx, self.labels = pd.factorize(y, sort=True)
 
         self.centers = []
-        for label in self.labels:
-            label_points = X[y == label]
+        for label_idx, label in enumerate(self.labels):
+            label_points = X[y_label_idx == label_idx]
 
             # Note that this center is technically only
             # correct if our metric is Euclidean.
@@ -49,7 +48,7 @@ if __name__ == "__main__":
 
 
     for metric in ["euclidean", "manhattan", "cosine"]:
-        clf = CenterDistanceClassifier("euclidean")
+        clf = CenterDistanceClassifier(metric)
         clf.fit(X_train, y_train)
         y_train_pred = clf.predict(X_train)
         y_test_pred = clf.predict(X_test)
