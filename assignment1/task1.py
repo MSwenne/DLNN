@@ -1,10 +1,9 @@
 import pandas as pd
 import numpy as np
 
-
-
 def euclidean_distance(a, b):
     return np.sum((a - b)**2, axis=1)**0.5
+
 
 class Cloud:
     def __init__(self, center, radius):

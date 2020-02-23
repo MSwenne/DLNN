@@ -1,14 +1,13 @@
 import pandas as pd
 import numpy as np
 
-from sklearn.metrics import pairwise_distances, confusion_matrix
+from sklearn.metrics import (
+    pairwise_distances, accuracy_score
+)
 
-def as_numpy(obj):
-    if isinstance(obj, pd.DataFrame) or isinstance(obj, pd.Series):
-        return obj.to_numpy()
-    if isinstance(obj, list):
-        return np.array(obj)
-    return obj
+from common import as_numpy, confusion_dataframe
+
+
 
 
 class CenterDistanceClassifier:
@@ -40,11 +39,7 @@ class CenterDistanceClassifier:
         closest_center = np.argmin(center_distances, axis=1)
         return self.labels[closest_center]
 
-def confusion_dataframe(y_true, y_pred, labels):
-    return pd.DataFrame(
-        data=confusion_matrix(y_true, y_pred),
-        index=labels,
-        columns=labels)
+
 
 if __name__ == "__main__":
     X_train = pd.read_csv("data/train_in.csv", header=None)
@@ -52,12 +47,17 @@ if __name__ == "__main__":
     X_test = pd.read_csv("data/test_in.csv", header=None)
     y_test = pd.read_csv("data/test_out.csv", header=None)
 
-    clf = CenterDistanceClassifier("euclidean")
-    clf.fit(X_train, y_train)
 
-    y_train_pred = clf.predict(X_train)
-    y_test_pred = clf.predict(X_test)
-    print("Train confusion matrix:")
-    print(confusion_dataframe(y_train, y_train_pred, range(10)))
-    print("\nTest confusion matrix:")
-    print(confusion_dataframe(y_test, y_test_pred, range(10)))
+    for metric in ["euclidean", "manhattan", "cosine"]:
+        clf = CenterDistanceClassifier("euclidean")
+        clf.fit(X_train, y_train)
+        y_train_pred = clf.predict(X_train)
+        y_test_pred = clf.predict(X_test)
+
+        print("\n\nDistance metric:", metric)
+        print("Train confusion matrix:")
+        print(confusion_dataframe(y_train, y_train_pred, range(10)))
+        print(f"Train accuracy: {accuracy_score(y_train, y_train_pred):.3%}")
+        print("\nTest confusion matrix:")
+        print(confusion_dataframe(y_test, y_test_pred, range(10)))
+        print(f"Test accuracy {accuracy_score(y_test, y_test_pred):.3%}")
