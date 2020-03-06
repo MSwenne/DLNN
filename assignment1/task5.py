@@ -1,33 +1,43 @@
-import pandas as pd
 import numpy as np
-
-from sklearn.metrics import accuracy_score
-from common import as_numpy, confusion_dataframe
 
 class NeuralNetwork:
     def __init__(self):
-        self.inputs, self.hidden, self.outputs = 2,2,1
-        self.hidden_weights = np.random.uniform(size=(self.inputs,self.hidden))
-        self.output_weights = np.random.uniform(size=(self.hidden,self.outputs))
-        self.bias = np.ones(size=(self.hidden,1))
-        self.lr = 1
+        self.X = [[0,0], [0,1], [1,0], [1,1]]
+        self.y = [[0],   [1],   [1],   [0]]
+        self.lr = 0.1
+        self.inputs = 2
+        self.hidden = 2
+        self.outputs = 1
 
-    def xor_net(self, x1, x2):
-        pass
+    def xor_net(self, x1, x2, weights):
+        bias = 1
+        X = np.array([x1, x2, bias])
+        hidden = np.dot(weights[0:2], X.T).T
+        hidden = self.sigmoid(hidden)
+        hidden = np.append(hidden, bias)
+        output = np.dot(weights[2], hidden.T).T
+        output = self.sigmoid(output)
+        print("input:  [", x1, x2, "]\toutput: ", int(output > 0.5))
+        return output
 
-    def mse(self, y_pred, y_true):
-        return np.sum((y_pred-y_true)**2)/len(y_pred)
+    def mse(self, weights):
+        mse = np.sum([(self.xor_net(x[0],x[1],weights)-self.y[i])**2 for i, x in enumerate(self.X)])/len(self.X)
+        print("mse: ", mse)
+        return mse
 
-    def grdmse(self, /):
-        pass
+    def grdmse(self, weights):
+        print("HERE:",self.mse(weights))
+        return np.gradient(self.mse(weights),weights)
 
     def gradient_descent(self, weights):
         return weights - self.lr*self.grdmse(weights)
 
-if __name__ == "__main__":
-    X_train = np.array([[0,0],[0,1],[1,0],[1,1]])
-    y_train = np.array([[0],[1],[1],[0]])
+    def sigmoid(self, x):
+        return 1 / (1 + np.exp(-x))
 
+if __name__ == "__main__":
+    weights = np.random.uniform(size=(3,3))
     model = NeuralNetwork()
-    for i in range(X_train):
-        model.xor_net(X_train[i], y_train[i])
+    for _ in range(10):
+        weights = model.gradient_descent(weights)
+        print("weights: ", weights)
