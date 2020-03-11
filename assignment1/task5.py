@@ -2,18 +2,7 @@ import numpy as np
 
 class NeuralNetwork:
     def __init__(self):
-        self.X = np.array([ [0,0],
-                            [1,1],
-                            [1,0],
-                            [1,1]])
-        self.y = np.array([ [0],
-                            [1],
-                            [1],
-                            [0]])
-        self.learning_rate = 0.01
-        self.inputs = 2
-        self.hidden = 2
-        self.outputs = 1
+        self.learning_rate = 0.1
 
     def xor_net(self, x1, x2, weights):
         (i1h1, i2h1, bh1,
@@ -21,38 +10,60 @@ class NeuralNetwork:
         h1o, h2o, bo) = weights
         bias = 1
 
-        h1 = x1*i1h1 + x2*i2h1 + bias*bh1
-        h2 = x1*i1h2 + x2*i2h2 + bias*bh2
-        h1 = self.sigmoid(h1)
-        h2 = self.sigmoid(h2)
+        h1_pre = i1h1*x1 + i2h1*x2 + bh1*bias
+        h1 = self.sigmoid(h1_pre)
+        h2_pre = i1h2*x1 + i2h2*x2 + bh2*bias
+        h2 = self.sigmoid(h2_pre)
+        out_pre = h1o*h1 + h2o*h2 + bo*bias
+        out = self.sigmoid(out_pre)
 
-        out = h1*h1o + h2*h2o + bias*bo
-        out = self.sigmoid(out)
+        return h1, h2, out
 
-        return out
+    def mse(self, weights):
+        x1 = np.array([0,0,1,1]).T
+        x2 = np.array([0,1,0,1]).T
+        y  = np.array([0,1,1,0]).T
+        _, _, y_pred = self.xor_net(x1, x2, weights)
 
-    def mse(self, y, y_pred):
-        return (y - y_pred)**2
+        for i in range(len(x1)):
+            print(f"[{x1.T[i]},{x2.T[i]}] -> {y_pred[i]}")
 
-    def grdmse(self, y, y_pred, weights):
-        return 2*(y - y_pred)
+        return np.mean(y - y_pred)**2
 
-    def gradient_descent(self, y, y_pred, weights):
-        return weights + self.learning_rate * self.grdmse(y, y_pred, weights)
+    def grdmse(self, weights):
+        x1 = np.array([0,0,1,1]).T
+        x2 = np.array([0,1,0,1]).T
+        y  = np.array([0,1,1,0]).T
+        bias = np.array([1,1,1,1]).T
+
+        h1, h2, out = self.xor_net(x1, x2, weights)
+        hidden = np.array((h1, h2, bias)).T
+        inputs = np.array((x1, x2, bias)).T
+
+        delta3 = (y - out).T
+        delta2 = np.tensordot(delta3, weights[3:6], axes=0).T
+        delta1 = np.tensordot(delta3, weights[0:3], axes=0).T
+
+        w_grad3 = np.matmul(delta3, self.sigmoid_diff(hidden))
+        w_grad2 = np.matmul(delta2, self.sigmoid_diff(inputs))
+        w_grad1 = np.matmul(delta1, self.sigmoid_diff(inputs))
+
+        return np.concatenate((np.mean(w_grad1,axis=0)[0], np.mean(w_grad2,axis=0)[0], w_grad3))
+
+    def gradient_descent(self, weights):
+        return weights - self.learning_rate * np.array([self.grdmse(weights)]).T
 
     def sigmoid(self, x):
-        return 1 / (1 + np.exp(-x))
+        return 1.0 / (1.0 + np.exp(-x))
+
+    def sigmoid_diff(self, x):
+        return x * (1.0 - x)
 
 if __name__ == "__main__":
     weights = np.random.uniform(size=(9,1))
     model = NeuralNetwork()
-    X = [[0,0], [0,1], [1,0], [1,1]]
-    y = [0, 1, 1, 0]
-    for i in range(100):
-        # print("iteration: ", i)
-        for i, (x1, x2) in enumerate(X):
-            y_pred = model.xor_net(x1, x2, weights)
-            weights = model.gradient_descent(y[i], y_pred, weights)
-            print(x1, " ",x2, " -> ",y_pred)
-        # print("mse: ",model.mse(weights))
-    print("weights: ", weights)
+    # print("mse",model.mse(weights))
+    for i in range(10000):
+        weights = model.gradient_descent(weights)
+    print("mse",model.mse(weights))
+        # print("weights: ", weights)
