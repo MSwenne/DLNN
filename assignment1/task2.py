@@ -7,9 +7,6 @@ from sklearn.metrics import (
 
 from common import as_numpy, confusion_dataframe
 
-
-
-
 class CenterDistanceClassifier:
     def __init__(self, metric="euclidean"):
         self.metric = metric
@@ -21,7 +18,7 @@ class CenterDistanceClassifier:
         y_label_idx, self.labels = pd.factorize(y, sort=True)
 
         self.centers = []
-        for label_idx, label in enumerate(self.labels):
+        for label_idx, _ in enumerate(self.labels):
             label_points = X[y_label_idx == label_idx]
 
             # Note that this center is technically only
@@ -41,6 +38,7 @@ class CenterDistanceClassifier:
 
 
 if __name__ == "__main__":
+    # Read training data and testing data
     X_train = pd.read_csv("data/train_in.csv", header=None)
     y_train = pd.read_csv("data/train_out.csv", header=None)
     X_test = pd.read_csv("data/test_in.csv", header=None)
