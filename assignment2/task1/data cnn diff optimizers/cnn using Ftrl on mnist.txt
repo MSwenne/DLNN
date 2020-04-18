@@ -1,0 +1,15 @@
+cnn using Ftrl on mnist
+	loss: 2.302  accuracy: 0.112  val_loss: 2.302  val_accuracy: 0.114  
+	loss: 2.302  accuracy: 0.112  val_loss: 2.302  val_accuracy: 0.114  
+	loss: 2.302  accuracy: 0.112  val_loss: 2.302  val_accuracy: 0.114  
+	loss: 2.302  accuracy: 0.112  val_loss: 2.302  val_accuracy: 0.114  
+	loss: 2.302  accuracy: 0.112  val_loss: 2.302  val_accuracy: 0.114  
+	loss: 2.302  accuracy: 0.112  val_loss: 2.302  val_accuracy: 0.114  
+	loss: 2.302  accuracy: 0.112  val_loss: 2.302  val_accuracy: 0.114  
+	loss: 2.302  accuracy: 0.112  val_loss: 2.302  val_accuracy: 0.114  
+	loss: 2.302  accuracy: 0.112  val_loss: 2.302  val_accuracy: 0.114  
+	loss: 2.302  accuracy: 0.112  val_loss: 2.302  val_accuracy: 0.114  
+	loss: 2.302  accuracy: 0.112  val_loss: 2.302  val_accuracy: 0.114  
+	loss: 2.302  accuracy: 0.112  val_loss: 2.302  val_accuracy: 0.114  
+Test loss:     2.302
+Test accuracy: 0.114

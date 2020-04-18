@@ -1,0 +1,15 @@
+cnn using RMSprop and binary_crossentropy on mnist
+	loss: 0.037  accuracy: 0.987  val_loss: 0.01  val_accuracy: 0.997  
+	loss: 0.014  accuracy: 0.995  val_loss: 0.007  val_accuracy: 0.997  
+	loss: 0.011  accuracy: 0.996  val_loss: 0.007  val_accuracy: 0.998  
+	loss: 0.009  accuracy: 0.997  val_loss: 0.007  val_accuracy: 0.998  
+	loss: 0.009  accuracy: 0.997  val_loss: 0.006  val_accuracy: 0.998  
+	loss: 0.009  accuracy: 0.997  val_loss: 0.006  val_accuracy: 0.998  
+	loss: 0.008  accuracy: 0.997  val_loss: 0.007  val_accuracy: 0.998  
+	loss: 0.008  accuracy: 0.997  val_loss: 0.007  val_accuracy: 0.998  
+	loss: 0.009  accuracy: 0.997  val_loss: 0.007  val_accuracy: 0.998  
+	loss: 0.009  accuracy: 0.997  val_loss: 0.007  val_accuracy: 0.998  
+	loss: 0.009  accuracy: 0.997  val_loss: 0.007  val_accuracy: 0.998  
+	loss: 0.009  accuracy: 0.997  val_loss: 0.007  val_accuracy: 0.998  
+Test loss:     0.007
+Test accuracy: 0.998

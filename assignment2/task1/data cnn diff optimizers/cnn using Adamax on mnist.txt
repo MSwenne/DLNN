@@ -1,0 +1,15 @@
+cnn using Adamax on mnist
+	loss: 0.349  accuracy: 0.895  val_loss: 0.089  val_accuracy: 0.971  
+	loss: 0.129  accuracy: 0.962  val_loss: 0.057  val_accuracy: 0.981  
+	loss: 0.098  accuracy: 0.971  val_loss: 0.045  val_accuracy: 0.985  
+	loss: 0.078  accuracy: 0.977  val_loss: 0.041  val_accuracy: 0.986  
+	loss: 0.067  accuracy: 0.98  val_loss: 0.037  val_accuracy: 0.988  
+	loss: 0.058  accuracy: 0.983  val_loss: 0.035  val_accuracy: 0.988  
+	loss: 0.052  accuracy: 0.985  val_loss: 0.034  val_accuracy: 0.988  
+	loss: 0.049  accuracy: 0.985  val_loss: 0.031  val_accuracy: 0.99  
+	loss: 0.044  accuracy: 0.987  val_loss: 0.032  val_accuracy: 0.99  
+	loss: 0.041  accuracy: 0.987  val_loss: 0.031  val_accuracy: 0.99  
+	loss: 0.036  accuracy: 0.989  val_loss: 0.03  val_accuracy: 0.99  
+	loss: 0.037  accuracy: 0.989  val_loss: 0.028  val_accuracy: 0.991  
+Test loss:     0.028
+Test accuracy: 0.991

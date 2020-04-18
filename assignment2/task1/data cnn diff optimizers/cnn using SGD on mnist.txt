@@ -1,0 +1,15 @@
+cnn using SGD on mnist
+	loss: 1.056  accuracy: 0.671  val_loss: 0.312  val_accuracy: 0.911  
+	loss: 0.436  accuracy: 0.868  val_loss: 0.231  val_accuracy: 0.933  
+	loss: 0.363  accuracy: 0.891  val_loss: 0.194  val_accuracy: 0.944  
+	loss: 0.322  accuracy: 0.903  val_loss: 0.179  val_accuracy: 0.948  
+	loss: 0.299  accuracy: 0.91  val_loss: 0.162  val_accuracy: 0.951  
+	loss: 0.275  accuracy: 0.917  val_loss: 0.149  val_accuracy: 0.956  
+	loss: 0.261  accuracy: 0.922  val_loss: 0.139  val_accuracy: 0.958  
+	loss: 0.247  accuracy: 0.927  val_loss: 0.137  val_accuracy: 0.958  
+	loss: 0.237  accuracy: 0.929  val_loss: 0.125  val_accuracy: 0.962  
+	loss: 0.225  accuracy: 0.933  val_loss: 0.123  val_accuracy: 0.964  
+	loss: 0.218  accuracy: 0.935  val_loss: 0.116  val_accuracy: 0.965  
+	loss: 0.212  accuracy: 0.936  val_loss: 0.112  val_accuracy: 0.965  
+Test loss:     0.112
+Test accuracy: 0.965

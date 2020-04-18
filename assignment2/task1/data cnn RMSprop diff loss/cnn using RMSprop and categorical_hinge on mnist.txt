@@ -1,0 +1,15 @@
+cnn using RMSprop and categorical_hinge on mnist
+	loss: 0.188  accuracy: 0.911  val_loss: 0.063  val_accuracy: 0.97  
+	loss: 0.082  accuracy: 0.96  val_loss: 0.043  val_accuracy: 0.979  
+	loss: 0.065  accuracy: 0.968  val_loss: 0.035  val_accuracy: 0.983  
+	loss: 0.057  accuracy: 0.972  val_loss: 0.034  val_accuracy: 0.983  
+	loss: 0.052  accuracy: 0.975  val_loss: 0.028  val_accuracy: 0.986  
+	loss: 0.048  accuracy: 0.976  val_loss: 0.031  val_accuracy: 0.985  
+	loss: 0.045  accuracy: 0.978  val_loss: 0.028  val_accuracy: 0.986  
+	loss: 0.043  accuracy: 0.979  val_loss: 0.03  val_accuracy: 0.985  
+	loss: 0.04  accuracy: 0.98  val_loss: 0.03  val_accuracy: 0.985  
+	loss: 0.039  accuracy: 0.981  val_loss: 0.025  val_accuracy: 0.988  
+	loss: 0.039  accuracy: 0.98  val_loss: 0.025  val_accuracy: 0.988  
+	loss: 0.037  accuracy: 0.982  val_loss: 0.025  val_accuracy: 0.987  
+Test loss:     0.025
+Test accuracy: 0.987

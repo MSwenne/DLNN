@@ -1,0 +1,15 @@
+cnn using Nadam on mnist
+	loss: 0.241  accuracy: 0.926  val_loss: 0.05  val_accuracy: 0.983  
+	loss: 0.085  accuracy: 0.975  val_loss: 0.038  val_accuracy: 0.988  
+	loss: 0.065  accuracy: 0.98  val_loss: 0.031  val_accuracy: 0.991  
+	loss: 0.053  accuracy: 0.984  val_loss: 0.028  val_accuracy: 0.991  
+	loss: 0.044  accuracy: 0.986  val_loss: 0.025  val_accuracy: 0.992  
+	loss: 0.04  accuracy: 0.988  val_loss: 0.027  val_accuracy: 0.991  
+	loss: 0.036  accuracy: 0.988  val_loss: 0.028  val_accuracy: 0.991  
+	loss: 0.032  accuracy: 0.99  val_loss: 0.03  val_accuracy: 0.991  
+	loss: 0.029  accuracy: 0.99  val_loss: 0.028  val_accuracy: 0.992  
+	loss: 0.026  accuracy: 0.992  val_loss: 0.027  val_accuracy: 0.992  
+	loss: 0.024  accuracy: 0.992  val_loss: 0.028  val_accuracy: 0.992  
+	loss: 0.022  accuracy: 0.993  val_loss: 0.026  val_accuracy: 0.993  
+Test loss:     0.026
+Test accuracy: 0.993

@@ -1,0 +1,15 @@
+cnn using RMSprop and MSE on mnist
+	loss: 0.01  accuracy: 0.931  val_loss: 0.003  val_accuracy: 0.979  
+	loss: 0.004  accuracy: 0.973  val_loss: 0.002  val_accuracy: 0.986  
+	loss: 0.003  accuracy: 0.979  val_loss: 0.002  val_accuracy: 0.987  
+	loss: 0.003  accuracy: 0.983  val_loss: 0.002  val_accuracy: 0.988  
+	loss: 0.002  accuracy: 0.985  val_loss: 0.002  val_accuracy: 0.988  
+	loss: 0.002  accuracy: 0.986  val_loss: 0.002  val_accuracy: 0.989  
+	loss: 0.002  accuracy: 0.987  val_loss: 0.002  val_accuracy: 0.988  
+	loss: 0.002  accuracy: 0.988  val_loss: 0.001  val_accuracy: 0.99  
+	loss: 0.002  accuracy: 0.989  val_loss: 0.002  val_accuracy: 0.988  
+	loss: 0.002  accuracy: 0.99  val_loss: 0.001  val_accuracy: 0.99  
+	loss: 0.002  accuracy: 0.99  val_loss: 0.001  val_accuracy: 0.99  
+	loss: 0.002  accuracy: 0.99  val_loss: 0.001  val_accuracy: 0.991  
+Test loss:     0.001
+Test accuracy: 0.991

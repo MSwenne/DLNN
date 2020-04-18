@@ -1,0 +1,15 @@
+cnn using Adagrad on mnist
+	loss: 0.486  accuracy: 0.856  val_loss: 0.222  val_accuracy: 0.936  
+	loss: 0.299  accuracy: 0.913  val_loss: 0.173  val_accuracy: 0.949  
+	loss: 0.252  accuracy: 0.927  val_loss: 0.149  val_accuracy: 0.956  
+	loss: 0.223  accuracy: 0.936  val_loss: 0.131  val_accuracy: 0.961  
+	loss: 0.2  accuracy: 0.942  val_loss: 0.118  val_accuracy: 0.965  
+	loss: 0.186  accuracy: 0.946  val_loss: 0.109  val_accuracy: 0.967  
+	loss: 0.173  accuracy: 0.95  val_loss: 0.102  val_accuracy: 0.97  
+	loss: 0.164  accuracy: 0.952  val_loss: 0.096  val_accuracy: 0.972  
+	loss: 0.154  accuracy: 0.955  val_loss: 0.09  val_accuracy: 0.973  
+	loss: 0.148  accuracy: 0.957  val_loss: 0.085  val_accuracy: 0.974  
+	loss: 0.142  accuracy: 0.959  val_loss: 0.081  val_accuracy: 0.974  
+	loss: 0.137  accuracy: 0.96  val_loss: 0.08  val_accuracy: 0.975  
+Test loss:     0.08
+Test accuracy: 0.975

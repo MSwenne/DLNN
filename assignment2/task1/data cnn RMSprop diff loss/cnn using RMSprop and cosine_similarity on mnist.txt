@@ -1,0 +1,15 @@
+cnn using RMSprop and cosine_similarity on mnist
+	loss: -0.937  accuracy: 0.928  val_loss: -0.983  val_accuracy: 0.98  
+	loss: -0.975  accuracy: 0.972  val_loss: -0.987  val_accuracy: 0.985  
+	loss: -0.981  accuracy: 0.979  val_loss: -0.989  val_accuracy: 0.987  
+	loss: -0.984  accuracy: 0.981  val_loss: -0.989  val_accuracy: 0.987  
+	loss: -0.986  accuracy: 0.984  val_loss: -0.991  val_accuracy: 0.989  
+	loss: -0.987  accuracy: 0.985  val_loss: -0.991  val_accuracy: 0.99  
+	loss: -0.988  accuracy: 0.987  val_loss: -0.99  val_accuracy: 0.988  
+	loss: -0.988  accuracy: 0.987  val_loss: -0.992  val_accuracy: 0.99  
+	loss: -0.989  accuracy: 0.988  val_loss: -0.989  val_accuracy: 0.988  
+	loss: -0.99  accuracy: 0.989  val_loss: -0.992  val_accuracy: 0.99  
+	loss: -0.99  accuracy: 0.989  val_loss: -0.992  val_accuracy: 0.99  
+	loss: -0.991  accuracy: 0.989  val_loss: -0.993  val_accuracy: 0.992  
+Test loss:     -0.993
+Test accuracy: 0.992

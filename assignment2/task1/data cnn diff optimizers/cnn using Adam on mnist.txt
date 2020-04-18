@@ -1,0 +1,15 @@
+cnn using Adam on mnist
+	loss: 0.24  accuracy: 0.927  val_loss: 0.055  val_accuracy: 0.983  
+	loss: 0.085  accuracy: 0.975  val_loss: 0.044  val_accuracy: 0.985  
+	loss: 0.066  accuracy: 0.98  val_loss: 0.033  val_accuracy: 0.989  
+	loss: 0.052  accuracy: 0.984  val_loss: 0.032  val_accuracy: 0.99  
+	loss: 0.046  accuracy: 0.986  val_loss: 0.029  val_accuracy: 0.991  
+	loss: 0.04  accuracy: 0.988  val_loss: 0.031  val_accuracy: 0.991  
+	loss: 0.035  accuracy: 0.989  val_loss: 0.029  val_accuracy: 0.991  
+	loss: 0.032  accuracy: 0.989  val_loss: 0.027  val_accuracy: 0.992  
+	loss: 0.03  accuracy: 0.99  val_loss: 0.029  val_accuracy: 0.991  
+	loss: 0.027  accuracy: 0.991  val_loss: 0.027  val_accuracy: 0.992  
+	loss: 0.024  accuracy: 0.992  val_loss: 0.027  val_accuracy: 0.992  
+	loss: 0.022  accuracy: 0.992  val_loss: 0.028  val_accuracy: 0.992  
+Test loss:     0.028
+Test accuracy: 0.992

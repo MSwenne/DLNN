@@ -1,0 +1,15 @@
+cnn using RMSprop and MAPE on mnist
+	loss: 11190903.691  accuracy: 0.895  val_loss: 3024454.175  val_accuracy: 0.972  
+	loss: 4088041.355  accuracy: 0.961  val_loss: 2067297.56  val_accuracy: 0.98  
+	loss: 3220295.288  accuracy: 0.969  val_loss: 1987807.48  val_accuracy: 0.98  
+	loss: 2714075.407  accuracy: 0.974  val_loss: 1691777.744  val_accuracy: 0.984  
+	loss: 2435244.487  accuracy: 0.976  val_loss: 1784630.423  val_accuracy: 0.982  
+	loss: 2258315.498  accuracy: 0.978  val_loss: 1768004.177  val_accuracy: 0.982  
+	loss: 2191312.128  accuracy: 0.978  val_loss: 1604111.774  val_accuracy: 0.984  
+	loss: 1999292.112  accuracy: 0.981  val_loss: 1290865.691  val_accuracy: 0.988  
+	loss: 1894706.708  accuracy: 0.981  val_loss: 1360176.106  val_accuracy: 0.986  
+	loss: 1809360.901  accuracy: 0.982  val_loss: 1258382.009  val_accuracy: 0.988  
+	loss: 1788169.732  accuracy: 0.982  val_loss: 1312625.635  val_accuracy: 0.987  
+	loss: 1708503.854  accuracy: 0.983  val_loss: 1279392.955  val_accuracy: 0.987  
+Test loss:     1279392.93
+Test accuracy: 0.987
